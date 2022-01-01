@@ -15,6 +15,7 @@ color = paper_scanner.get_ambient_light()*10
 def darkMode():
     while True:
         if color > 100: 
+         color = paper_scanner.get_ambient_light()*10
          motor.run_to_position(50, 'clockwise', 100)
          motor.run_to_position(0, 'counterclockwise', 100)
          motor.run_to_position(5, 'shortest path', 100)
