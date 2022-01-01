@@ -5,6 +5,7 @@ import math
 #add another motor
 hub = MSHub()
 motor = Motor('A')
+motor2 = Motor('B')
 paper_scanner = ColorSensor('F')
 
 color = paper_scanner.get_ambient_light()
@@ -17,6 +18,8 @@ while True:
     if color < 130:
        motor.run_to_position(50, 'clockwise', 100)
        motor.run_to_position(0, 'counterclockwise', 100)
+       motor2.run_to_position(50, 'clockwise', 100)
+       motor2.run_to_position(0, 'counterclockwise', 100)
        #motor.run_to_position(27, 'shortest path', 100)
        #motor.run_to_position(5, 'shortest path', 100)
        #motor.run_to_degrees_counted(1, 100)
