@@ -15,6 +15,11 @@ while True:
     
     color = paper_scanner.get_ambient_light()*10
     print(color)
+    if color > 11:
+       motor.run_to_position(50, 'clockwise', 100)
+       motor.run_to_position(0, 'counterclockwise', 100)
+       motor2.run_to_position(50, 'clockwise', 100)
+       motor2.run_to_position(0, 'counterclockwise', 100)
     if color < 130:
        motor.run_to_position(50, 'clockwise', 100)
        motor.run_to_position(0, 'counterclockwise', 100)
